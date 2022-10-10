@@ -2,7 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 
 
-const SearchBar = ({text}) =>
+const View = ({text}) =>
 {
   const [search, setSearch] = useState('');
 
@@ -26,7 +26,7 @@ const SearchBar = ({text}) =>
 function App() {
   return (
     <div className="App">
-        <SearchBar text="find countries"/>
+        <View text="find countries"/>
     </div>
   );
 }
