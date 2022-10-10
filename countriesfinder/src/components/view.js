@@ -3,7 +3,7 @@ import {useState} from 'react';
 import SearchBar  from './searchBar';
 import List from './list';
 
-const View = () =>
+const View = ({countriesData}) =>
 {
   const [search, setSearch] = useState('');
 
@@ -16,7 +16,7 @@ const View = () =>
   return(
     <div>
       <SearchBar text="find countries" values={search} change={inputChange}/>
-      <List/>
+      <List theData={countriesData} searched={search}/>
     </div>
   );
 
