@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import SearchBar  from './searchBar';
-import List from './list';
+import ListView from './list';
 
 const View = ({countriesData}) =>
 {
@@ -12,11 +12,10 @@ const View = ({countriesData}) =>
     //console.log(event.target.value);
     setSearch(event.target.value);
   }
-
   return(
     <div>
       <SearchBar text="find countries" values={search} change={inputChange}/>
-      <List theData={countriesData} searched={search}/>
+      <ListView theData={countriesData} searched={search}/>
     </div>
   );
 
