@@ -2,11 +2,9 @@ import React from 'react';
 import {useState} from 'react';
 
 
-const View = ({text}) =>
+const View = () =>
 {
   const [search, setSearch] = useState('');
-
-  console.log(search);
 
   const inputChange = (event) =>
   {
@@ -16,17 +14,27 @@ const View = ({text}) =>
 
   return(
     <div>
-      {text}<input value={search} onChange={inputChange}></input>
+      <SearchBar text="find countries" values={search} change={inputChange}/>
     </div>
   );
 
 }
 
 
+const SearchBar = (props) =>
+{
+  return(
+    <div>
+      {props.text}<input value={props.values} onChange={props.change}></input>
+    </div>
+  );
+}
+
+
 function App() {
   return (
     <div className="App">
-        <View text="find countries"/>
+        <View/>
     </div>
   );
 }
