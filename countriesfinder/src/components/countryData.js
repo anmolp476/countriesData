@@ -1,14 +1,16 @@
 import {React, useState} from 'react';
 
 
-const Information = (props) =>
+const Information = ({filteredList}) =>
 {
-
-    return(
-        <div>
-
-        </div>
-    )
+    if(filteredList.length === 1)
+    {
+        return(
+            <div>
+                Switzerland
+            </div>
+        )
+    }
 }
 
 
