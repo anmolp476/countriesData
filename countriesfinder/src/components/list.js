@@ -1,22 +1,21 @@
 import React from 'react';
 
 
-const ListView = (props) =>
+const ListView = ({theData, searched}) =>
 {
-    let dataVar = props.theData;
+    let dataVar = theData;
     let filteredCountries = [];
 
-    filteredCountries = dataVar.map((country) =>
+    filteredCountries = dataVar.filter((country) =>
     {
-        return country.name
+        return country.name.common.toLowerCase().includes(searched.toLowerCase())
     })
 
     //console.log(dataVar[0].name.common);
     return(
         <div>
             <ul>
-                <li>{dataVar[0].name.common}</li>
-                {dataVar.map((country) =>
+                {filteredCountries.map((country) =>
                 {
                     return <li>{country.name.common}</li>
                 })}
