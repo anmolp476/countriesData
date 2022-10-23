@@ -6,14 +6,16 @@ import View from './components/view';
 function App() {
 
   const [data, setData] = useState([
-    {name: 
-    {
-      common: "Iceland"
-    },
-    flags: 
-      {png: "wow"}
-    }]);
+  {name: 
+  {
+    common: "Iceland"
+  },
+  flags: 
+    {png: "wow"}
+  }]);
 
+  console.log(process.env.REACT_APP_API_KEY);
+  
   useEffect(() =>
   {
     axios.get("https://restcountries.com/v3.1/all")

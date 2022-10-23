@@ -9,8 +9,6 @@ const Information = ({theCountry}) =>
         newArr.push(theCountry["languages"][key])
     }
 
-    console.log(theCountry["flags"]["png"])
-
     return(
         <div>
             <h1>{theCountry.name.common}</h1>

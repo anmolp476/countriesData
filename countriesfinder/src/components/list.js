@@ -20,6 +20,7 @@ const ListView = ({theData, searched}) =>
             </div>
         );
     }
+    
     else
     {
         return(
@@ -27,7 +28,11 @@ const ListView = ({theData, searched}) =>
                 <ul>
                     {filteredCountries.map((country) =>
                     {
-                        return <li key={Math.random()}>{country.name.common}</li>
+                        return(
+                            <>
+                                <li key={Math.random()}>{country.name.common}</li>
+                            </>
+                        );
                     })}
                 </ul>
             </div>
