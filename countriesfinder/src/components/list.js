@@ -4,7 +4,12 @@ import React from 'react';
 const ListView = (props) =>
 {
     let dataVar = props.theData;
-    const currSearch = props.searched;
+    let filteredCountries = [];
+
+    filteredCountries = dataVar.map((country) =>
+    {
+        return country.name
+    })
 
     //console.log(dataVar[0].name.common);
     return(
