@@ -1,16 +1,31 @@
-import {React, useState} from 'react';
+import {React} from 'react';
 
 
-const Information = ({filteredList}) =>
+const Information = ({theCountry}) =>
 {
-    if(filteredList.length === 1)
+    const newArr = [];
+    for(const key in theCountry["languages"])
     {
-        return(
-            <div>
-                Switzerland
-            </div>
-        )
+        newArr.push(theCountry["languages"][key])
     }
+
+    console.log(theCountry["flags"]["png"])
+
+    return(
+        <div>
+            <h1>{theCountry.name.common}</h1>
+            <p>Capital: {theCountry.capital}<br></br>Area: {theCountry.area}</p>
+            <br></br>
+            <strong>Languages:</strong>
+            <ul>
+                {newArr.map((language) =>
+                {
+                    return <li key={Math.random()*999}>{language}</li>
+                })}
+            </ul>
+            <img src={theCountry["flags"]["png"]}></img>
+        </div>
+    )
 }
 
 

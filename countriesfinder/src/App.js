@@ -5,7 +5,14 @@ import View from './components/view';
 
 function App() {
 
-  const [data, setData] = useState([{name: {common: "Iceland"}}]);
+  const [data, setData] = useState([
+    {name: 
+    {
+      common: "Iceland"
+    },
+    flags: 
+      {png: "wow"}
+    }]);
 
   useEffect(() =>
   {
