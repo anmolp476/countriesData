@@ -1,9 +1,9 @@
 import {React, useState} from 'react';
 
 
-const information = (props) =>
+const Information = (props) =>
 {
-    
+
     return(
         <div>
 
@@ -11,6 +11,9 @@ const information = (props) =>
     )
 }
 
+
+
+export default Information;
 
 
 
