@@ -11,11 +11,13 @@ function App() {
     common: "Iceland"
   },
   flags: 
-    {png: "wow"}
-  }]);
+    {png: "wow"},
 
-  console.log(process.env.REACT_APP_API_KEY);
-  
+  capitalInfo:
+    {latlng: [4324,342]}
+  },
+]);
+
   useEffect(() =>
   {
     axios.get("https://restcountries.com/v3.1/all")
